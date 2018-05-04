@@ -8,7 +8,8 @@ import { CoursesService } from '../../services';
 })
 export class CoursesListComponent implements OnInit {
 
-  courses: any[] = [];
+  courses: any[];
+  displayedColumns = ['logo_url', 'course_slug', 'category_slug', 'title'];
 
   constructor(private coursesService: CoursesService) {
   }

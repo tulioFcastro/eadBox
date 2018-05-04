@@ -4,7 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import {
-  MatListModule
+  MatButtonModule,
+  MatToolbarModule,
+  MatTableModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -23,10 +25,14 @@ import { CoursesListComponent } from './components';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatListModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatTableModule
   ],
   exports: [
-    MatListModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatTableModule
   ],
   providers: [
     CoursesService

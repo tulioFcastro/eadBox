@@ -1,5 +1,33 @@
-<mat-list role="list">
-  <mat-list-item role="listitem" *ngFor="let course of courses">
-    {{ course['course_id'] }}
-  </mat-list-item>
-</mat-list>
+<div class="mat-elevation-z8">
+
+  <mat-table #table [dataSource]="courses" *ngIf="courses">
+    <!-- logo_url Column -->
+    <ng-container matColumnDef="logo_url">
+      <mat-header-cell *matHeaderCellDef>Logo</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <img class="logo" src="{{element['logo_url']}}">
+      </mat-cell>
+    </ng-container>
+
+    <!-- course_slug Column -->
+    <ng-container matColumnDef="course_slug">
+      <mat-header-cell *matHeaderCellDef>Curso</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element['course_slug']}} </mat-cell>
+    </ng-container>
+
+    <!-- category_slug Column -->
+    <ng-container matColumnDef="category_slug">
+      <mat-header-cell *matHeaderCellDef>Categoria</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element['category']['category_slug']}} </mat-cell>
+    </ng-container>
+
+    <!-- title Column -->
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef>Título</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element['title']}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
