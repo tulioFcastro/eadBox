@@ -2,6 +2,7 @@
   "name": "ead-box",
   "version": "0.0.0",
   "license": "MIT",
+  "apiUrl": "https://tulio.eadbox.com/api",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
