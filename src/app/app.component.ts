@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { CoursesService } from "./services";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,21 +8,5 @@ import { CoursesService } from "./services";
 export class AppComponent {
   title = 'Eadbox test';
 
-  constructor(private coursesService: CoursesService) {
-
-  }
-  ngOnInit() {
-    this.fetchCourses();
-  }
-
-  fetchCourses() {
-    this.coursesService.fecthCourses(1).subscribe(
-      (response) => {
-        console.log(response);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
+  constructor() {}
 }
