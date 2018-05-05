@@ -14,7 +14,7 @@ export class CoursesService {
   }
 
   fecthCourses(page = 0): Observable<any> {
-    let header = new HttpHeaders();
+    const header = new HttpHeaders();
     header.append('accept', 'application/json');
 
     let resourceUrl = `${this.baseUrl}/courses`;

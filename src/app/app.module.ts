@@ -5,7 +5,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {
   MatTableModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+  MatTabsModule,
+  MatIconModule,
+  MatCardModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -13,24 +16,31 @@ import { AppComponent } from './app.component';
 import {
   CoursesService
 } from './services';
-import { CoursesListComponent } from './components';
+
+import {
+  CoursesComponent,
+  CoursesListComponent,
+  CoursesGridComponent
+} from './components';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoursesListComponent
+    CoursesComponent,
+    CoursesListComponent,
+    CoursesGridComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTabsModule,
+    MatIconModule,
+    MatCardModule
   ],
-  exports: [
-    MatTableModule,
-    MatPaginatorModule
-  ],
+  exports: [],
   providers: [
     CoursesService
   ],
