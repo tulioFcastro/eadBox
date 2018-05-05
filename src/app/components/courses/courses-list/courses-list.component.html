@@ -1,5 +1,4 @@
 <div class="mat-elevation-z8">
-  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
   <mat-table [dataSource]="dataSource" *ngIf="dataSource">
     <!-- logo_url Column -->
     <ng-container matColumnDef="logo_url">
@@ -30,4 +29,5 @@
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 </div>

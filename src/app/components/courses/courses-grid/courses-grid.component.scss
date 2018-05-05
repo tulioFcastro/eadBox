@@ -1,0 +1,29 @@
+.example-card {
+  max-width: 25vw;
+  margin: 10px;
+  div {
+    height: 8vw;
+    min-height: 160px;
+    display: flex;
+  }
+}
+
+.grid-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hoverable:hover {
+  transition: box-shadow .25s;
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.wrap-text {
+  word-wrap: break-word;
+}
+
+.course-category {
+  text-transform: capitalize;
+  font-size: 10px;
+}
