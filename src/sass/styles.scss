@@ -3,5 +3,6 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 body {
-  font-family: Roboto, Arial, sans-serif;
+  font-family: Roboto, sans-serif;
+  overflow: auto !important;
 }

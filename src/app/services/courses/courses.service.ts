@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 const Package = require('../../../../package.json');
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
@@ -14,6 +14,9 @@ export class CoursesService {
   }
 
   fecthCourses(page = 0): Observable<any> {
+    let header = new HttpHeaders();
+    header.append('accept', 'application/json');
+
     let resourceUrl = `${this.baseUrl}/courses`;
     if (page) {
       resourceUrl+= '?page=' + page;

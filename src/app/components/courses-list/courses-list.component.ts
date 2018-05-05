@@ -21,7 +21,6 @@ export class CoursesListComponent implements OnInit {
   fetchCourses() {
     this.coursesService.fecthCourses(1).subscribe(
       (res) => {
-        console.log(res);
         this.courses = res;
       },
       (error) => {
